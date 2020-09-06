@@ -40,6 +40,10 @@ To download all the messages in the specified mailbox:
 
 $ socat openssl:example.com:993 system:'/path/to/imap-mh download'
 
+If there are problems with certificate verification, try:
+
+$ socat openssl:example.com:993,verify=0 system:'/path/to/imap-mh download'
+
 After downloading:
 
 $ perl /path/to/make_mh_symlinks.pl
@@ -56,6 +60,10 @@ $ cd ~/Mail/inbox
 
 $ socat openssl:example.com:993 system:'/path/to/imap-mh update'
 
+If there are problems with certificate verification, try:
+
+$ socat openssl:example.com:993,verify=0 system:'/path/to/imap-mh update'
+
 This uses IMAP QRESYNC to perform the update. If changes have been made, the old symlinks will be removed, and will have to be re-generated:
 
 $ perl /path/to/make_mh_symlinks.pl | sh
@@ -65,6 +73,10 @@ $ perl /path/to/make_mh_symlinks.pl | sh
 $ cd ~/Mail/inbox
 
 $ socat openssl:example.com:993 system:'/path/to/imap-mh idle'
+
+If there are problems with certificate verification, try:
+
+$ socat openssl:example.com:993,verify=0 system:'/path/to/imap-mh idle'
 
 This uses IMAP IDLE, waits for an EXISTS message, then exits.
 
