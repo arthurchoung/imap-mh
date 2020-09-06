@@ -68,6 +68,15 @@ $ socat openssl:example.com:993 system:'/path/to/imap-mh idle'
 
 This uses IMAP IDLE, waits for an EXISTS message, then exits.
 
+## Notes
+
+This is a rather quick and dirty implementation.
+
+Things to do:
+
+* Flags
+* Send local changes to server
+
 ## Legal
 
 Copyright (c) 2020 Arthur Choung. All rights reserved.
