@@ -34,7 +34,7 @@ $ cd inbox
 
 $ /path/to/imap-mh init
 
-Answer the prompts to enter your username, password, and mailbox. For the mailbox, enter 'inbox' unless you want a specific mailbox. The information will be saved in the dotfiles '.username', '.password', and '.mailbox' in the current directory.
+Answer the prompts to enter your username, password, and mailbox. For the mailbox, enter 'inbox' unless you want a specific mailbox. The information will be saved in the dotfiles '.username', '.password', and '.mailbox' in the current directory. Please note that this saves the password to a file in plain text, which may be a security risk. Caution is advised.
 
 To download all the messages in the specified mailbox:
 
